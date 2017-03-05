@@ -1,0 +1,904 @@
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "group_events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "location" varchar, "starts_on" date, "ends_on" date, "duration" integer, "deleted" boolean DEFAULT 'f', "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_group_events_on_user_id" ON "group_events" ("user_id")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20161120153756')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cathy Cremin"], ["description", "Nam quas quia omnis nostrum ducimus minima. Consequatur amet fuga iusto. Voluptatibus at et a incidunt aliquam consequatur."], ["location", "79134 Kristin Knolls"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Markus Braun MD"], ["description", "Dolorem velit porro. Est perspiciatis numquam iste. Laboriosam esse sint. Suscipit ut provident et qui. Corrupti mollitia rerum et."], ["location", "3088 Becker Course"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Winnifred Gottlieb"], ["description", "Aut id asperiores voluptatibus sed pariatur quisquam. Minus nihil asperiores. Labore a quod omnis aut vel."], ["location", "8688 Harber Loaf"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Wed, 23 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ruby Bauch"], ["description", "Dolorum consequatur dolore sit qui et et ut. Voluptas iusto occaecati ullam vel beatae adipisci. Est quia et."], ["location", "4791 Allan Harbors"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 24 Nov 2016], ["duration", 2], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fermin Stamm"], ["description", "Velit tenetur numquam ipsa quo tempora. Et culpa ratione sapiente qui. Aut vel sed nesciunt consequatur. Quod quae est."], ["location", "65577 Kade Cove"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.14ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Forest Koelpin"], ["description", "Error in laborum velit consequuntur quia soluta. Quisquam accusantium fuga. Suscipit voluptas magni. Ut rerum odit earum consequatur eum voluptas."], ["location", "9108 Wolf Spring"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Sun, 27 Nov 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.2ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 5ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Omnis nihil omnis quia fuga dolorum atque blanditiis. Rem ut neque deleniti eum. Aliquid est minus quod nulla.", "ends_on"=>"2016-11-25", "location"=>"1810 Alessandro Orchard", "name"=>"Blake Willms", "starts_on"=>"2016-11-22", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Blake Willms"], ["description", "Omnis nihil omnis quia fuga dolorum atque blanditiis. Rem ut neque deleniti eum. Aliquid est minus quod nulla."], ["location", "1810 Alessandro Orchard"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Fri, 25 Nov 2016], ["duration", 3], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 201 Created in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 422 Unprocessable Entity in 8ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Barry Watsica MD"], ["description", "Explicabo sit libero sapiente. Libero praesentium atque non aliquid. Est ullam adipisci est in. Est labore incidunt quas omnis eius ab blanditiis. Molestiae harum laudantium et ullam."], ["location", "26494 Raphael Summit"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Sun, 27 Nov 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "name" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["name", "group event name"], ["updated_at", 2016-11-21 22:33:28 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tamara Hoppe"], ["description", "Velit amet ullam consequatur. Sit reiciendis eaque. Dolores non fugiat molestiae ut explicabo. Neque et placeat mollitia."], ["location", "1335 Shea Knolls"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Mon, 28 Nov 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brandi Harvey"], ["description", "Voluptatum quasi nostrum fuga ullam. Dolorem sit ut pariatur ipsam deserunt reprehenderit optio. Repudiandae qui eum."], ["location", "16577 Jacobs Shoals"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-21 22:33:28 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Emmitt O'Kon"], ["description", "Est aliquid voluptates nam praesentium ut voluptatem consectetur. Numquam ea eum ut. Et possimus blanditiis quae magnam ut. Cumque sit aliquid dignissimos. Officiis alias perferendis."], ["location", "27925 Cassandra Plaza"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Fri, 25 Nov 2016], ["duration", 3], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-21 22:33:28 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arvilla Corwin"], ["description", "Officia et odio id dolorem totam qui. Dolor sed qui quia. Porro et et commodi rerum id libero. Excepturi voluptatem impedit assumenda totam magnam ab."], ["location", "3543 Breitenberg Summit"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Colby Bailey IV"], ["description", "Sint illum dignissimos et quia dolorem. Fugit consequatur ea porro. Blanditiis ad similique sapiente ex deleniti."], ["location", "284 Guy Lane"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Wed, 21 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abagail Williamson"], ["description", "Facilis aspernatur aut harum. Quis ipsam rerum. Tenetur perferendis voluptatem corrupti id. Dolorem odio id et dolorem aliquid."], ["location", "1677 Jettie Island"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Fri, 20 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marlee Pfannerstill"], ["description", "Et labore qui quos. Earum assumenda eveniet. Sed consequatur est iure rem ipsa. Architecto id esse cumque aperiam. Totam consectetur at ut autem officia."], ["location", "3818 Zander Drives"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Wed, 23 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Sit nulla voluptas. Consectetur qui dolores nostrum fugit dolorem dolores accusamus. Porro voluptatem quos illo omnis aut. Ut accusamus ex sequi aut eius necessitatibus laboriosam."], ["location", "1680 Adolfo Curve"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-21 22:33:28 UTC], ["updated_at", 2016-11-21 22:33:28 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Annette Conroy V"], ["description", "Rerum id sed magnam. Aliquam omnis beatae iusto et voluptas est velit. Totam optio doloremque quisquam et. Quo et dolores veritatis quos sint."], ["location", "63367 Olga Rest"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tillman Lakin"], ["description", "Enim et voluptas deleniti in quod culpa. Libero molestias commodi consequatur. Non fugiat sit facere itaque. Harum consequuntur quis veritatis. Maiores consequatur optio."], ["location", "1260 Grimes Mission"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Mon, 28 Nov 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arthur Ortiz"], ["description", "Iure numquam quaerat architecto recusandae vitae. Quod beatae sunt voluptas aut aspernatur nisi omnis. Voluptate excepturi consectetur omnis accusamus."], ["location", "954 Bettie Cliff"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Barney Kreiger I"], ["description", "Assumenda ullam nobis quasi. Quia ipsa vitae libero quam itaque aliquam pariatur. Ea ducimus ratione aut aperiam. Ut illum expedita blanditiis voluptatibus nesciunt deleniti consequatur."], ["location", "2989 Bette River"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 24 Nov 2016], ["duration", 2], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kayla Mosciski"], ["description", "Minima sint qui recusandae dolorem omnis. Occaecati quo sunt impedit maiores provident eius voluptas. Quisquam molestiae dolor aliquam cumque nesciunt quas."], ["location", "49007 Dickens Passage"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 24 Nov 2016], ["duration", 2], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Reyna Berge"], ["description", "Earum illum dolor. Est iure sint est quo earum. Quas eos accusantium voluptas perferendis. Facere consequuntur assumenda accusantium. Tenetur et sint corporis voluptates possimus perferendis aut."], ["location", "93804 Green Mill"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Wed, 23 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Id velit repellendus et deleniti. Aut saepe fugiat corrupti mollitia explicabo ipsum. Et corrupti aut suscipit possimus. Laboriosam illo magnam aliquid laudantium aut fugiat. Molestiae dicta quam ullam dolorem quidem eaque ratione.", "ends_on"=>"2016-12-01", "location"=>"631 Kuhic Port", "name"=>"Tabitha Walsh", "starts_on"=>"2016-11-22", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Tabitha Walsh"], ["description", "Id velit repellendus et deleniti. Aut saepe fugiat corrupti mollitia explicabo ipsum. Et corrupti aut suscipit possimus. Laboriosam illo magnam aliquid laudantium aut fugiat. Molestiae dicta quam ullam dolorem quidem eaque ratione."], ["location", "631 Kuhic Port"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 5ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 9ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ricky Brekke"], ["description", "Delectus et nihil numquam quisquam qui architecto maxime. Ipsa velit deserunt fugit ea quia nemo aut. Sed repellat est voluptas cumque ratione officiis."], ["location", "8774 Bednar Place"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "group_events" SET "name" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["name", "group event name"], ["updated_at", 2016-11-21 22:34:02 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 201 Created in 8ms (Views: 1.2ms | ActiveRecord: 0.9ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Saul Larkin"], ["description", "Aut non quidem ullam labore ex eveniet. Soluta doloribus est occaecati est. Qui recusandae harum velit et. Autem et odio cumque tempore et et."], ["location", "19430 Skyla Coves"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Sat, 26 Nov 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Jeanne Mraz"], ["description", "Voluptatibus repellat deleniti. Eos debitis sequi ea veritatis non sint. Natus rerum qui minus consequuntur iure."], ["location", "526 Hackett Row"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Mon, 28 Nov 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-21 22:34:02 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mustafa Armstrong"], ["description", "Omnis laboriosam animi quasi neque et veniam. Suscipit tempore praesentium eaque veniam sed aliquam incidunt. Quasi culpa quas modi aut neque porro eius. Aut ea sit voluptatibus consequuntur quia aperiam."], ["location", "3272 Simonis Lake"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Sun, 27 Nov 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-21 22:34:02 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Horacio Emmerich"], ["description", "Vitae ullam illo. Quia magni error eligendi commodi omnis et. Ut mollitia pariatur dicta ad vero incidunt libero."], ["location", "2565 Waelchi Mount"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Delilah Funk"], ["description", "Minima consectetur soluta asperiores. Corrupti fugit incidunt neque. Eos voluptatem nam."], ["location", "9760 Arnold Flat"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Wed, 21 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Therese Kshlerin"], ["description", "Unde ut adipisci illo deserunt. Vel distinctio aliquid. Nobis minus est accusamus sit modi excepturi ut. Ut ipsam officiis suscipit ducimus laborum tempora."], ["location", "692 Keon Throughway"], ["starts_on", Mon, 21 Nov 2016], ["ends_on", Fri, 20 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shawn Toy MD"], ["description", "Eum velit illum in qui. Quibusdam qui ea. Dolorem a sit fugiat nemo magni quisquam tempora. Molestiae sed quo voluptatem nisi. Quia suscipit eligendi."], ["location", "969 Brad Lock"], ["starts_on", Tue, 22 Nov 2016], ["ends_on", Sat, 26 Nov 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-21 22:34:02 UTC], ["updated_at", 2016-11-21 22:34:02 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Natasha Heidenreich"], ["description", "Quod perspiciatis aut libero inventore quasi aut similique. Magni praesentium illo. Animi incidunt dolor eius rerum nihil."], ["location", "7845 Devonte Views"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Alfreda Hammes"], ["description", "Quod molestias facere at. Ut rerum dolore porro sint velit recusandae blanditiis. Commodi architecto voluptatem et. Deleniti ab excepturi. Qui aliquid pariatur impedit iste libero labore."], ["location", "8943 Sunny Plains"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jaylen Rowe"], ["description", "Velit qui unde. Magnam recusandae voluptatem totam quas non corporis facilis. Occaecati et eligendi. Consequatur est non in nemo iure. Quis et est tempore expedita id."], ["location", "2083 Kunde Way"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kiel O'Hara"], ["description", "Eius sint quo ea laborum. Esse est omnis cupiditate quisquam. In qui eos commodi ea ipsa aut."], ["location", "8674 Giovanny Knolls"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Florence Gulgowski"], ["description", "Et provident quia. Occaecati incidunt aliquam veritatis accusamus fugiat nam sed. Culpa voluptate accusantium in rerum exercitationem. Nobis quae molestiae provident consequatur."], ["location", "31943 Kulas Gardens"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ruthie Koepp"], ["description", "Fugit et voluptas assumenda recusandae. Aliquid et ab sunt. Sequi consequatur suscipit necessitatibus."], ["location", "4535 Gaetano Heights"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:09:48 UTC], ["updated_at", 2016-11-27 21:09:48 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.2ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Et in sequi veritatis sed velit. Temporibus dicta vel nihil id. Autem excepturi sit necessitatibus facilis eos qui. Voluptates veniam voluptatum asperiores sed voluptas.", "ends_on"=>"2016-12-05", "location"=>"46781 Wade Mills", "name"=>"Misael Turner", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Misael Turner"], ["description", "Et in sequi veritatis sed velit. Temporibus dicta vel nihil id. Autem excepturi sit necessitatibus facilis eos qui. Voluptates veniam voluptatum asperiores sed voluptas."], ["location", "46781 Wade Mills"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:10:37 UTC], ["updated_at", 2016-11-27 21:10:37 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 201 Created in 49235ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Anabel Kling IV"], ["description", "Omnis debitis rerum consequatur est officia aut impedit. Omnis eum harum temporibus expedita vero molestias impedit. Qui eaque doloribus optio molestias eveniet facere."], ["location", "63730 Marty Circle"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Stewart Thiel"], ["description", "Doloremque quis nulla nobis architecto corporis. Aut sunt nostrum et quas. Ut blanditiis voluptatum consequuntur accusamus. Assumenda voluptatum quia fuga ducimus incidunt consequatur. Quis est dolorum qui illum sed."], ["location", "400 Wehner Flat"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rosie Fritsch"], ["description", "Ut sint ex non. Non aliquam iusto officia illum. Atque maxime doloremque. Voluptatum non alias autem et et quibusdam quo. Exercitationem blanditiis praesentium et animi."], ["location", "61947 Dion Plains"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luciano Ziemann"], ["description", "Aut esse exercitationem. Aut voluptas aut nostrum nisi qui magnam sed. Voluptatem hic tempore sed consequatur harum."], ["location", "4220 Yundt Ridges"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kiel Rempel"], ["description", "Culpa ut qui possimus esse quo debitis ut. Voluptatem atque consequatur commodi molestias quidem debitis magnam. Et provident incidunt voluptatum."], ["location", "3204 Albin Passage"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brain Terry"], ["description", "Sapiente voluptas quos iure possimus tempora. Aut voluptatibus architecto. In nemo at impedit sit velit. Sint voluptatem voluptate dolor. Et a placeat ut nostrum ratione ut natus."], ["location", "3578 Damon Highway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.5ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.6ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Quas id dolor ex reprehenderit voluptates aut. Repellendus optio nam esse ea temporibus. Consequatur minima est ipsam. Voluptate placeat cum aut consequatur. Reprehenderit eveniet repudiandae animi sapiente minima est id.", "ends_on"=>"2016-12-02", "location"=>"144 Lind Crest", "name"=>"Jerrold Marks", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jerrold Marks"], ["description", "Quas id dolor ex reprehenderit voluptates aut. Repellendus optio nam esse ea temporibus. Consequatur minima est ipsam. Voluptate placeat cum aut consequatur. Reprehenderit eveniet repudiandae animi sapiente minima est id."], ["location", "144 Lind Crest"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 14ms (Views: 10.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ryleigh Koelpin"], ["description", "Consequatur cum a odio esse adipisci ut explicabo. Inventore unde earum asperiores aperiam sint. Unde adipisci ipsa voluptate reprehenderit iure error deserunt. Qui at dolorem neque voluptatibus sit."], ["location", "81673 Robel Gardens"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christop Rogahn"], ["description", "Alias aperiam consectetur ipsam voluptatem ullam dolores deserunt. Libero placeat consectetur et officiis. Ad beatae nisi aperiam veniam delectus. Ut deleniti praesentium aspernatur in."], ["location", "3193 Murl Fords"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hudson Mante"], ["description", "Doloribus ipsum molestias sed. Molestiae earum natus cupiditate. Blanditiis laboriosam amet velit ut ut porro tempore. Sit aperiam deleniti fugiat natus tenetur."], ["location", "59135 Wiegand Well"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:10:41 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (ActiveRecord: 0.4ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Woodrow Casper"], ["description", "Fugiat autem est. Consequatur porro velit amet rem. Sint commodi ipsa dicta quia rerum cum dolores. Error quis similique ad amet aut et voluptatibus."], ["location", "872 Jedediah Harbors"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:10:41 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Remington Lubowitz II"], ["description", "Quod qui illum dolores velit libero. Odit rerum minus quia et numquam eum occaecati. Pariatur architecto quia excepturi maiores et consequatur ea. In perferendis cum repellat voluptates et. Ad ipsam corrupti nihil autem qui quam ex."], ["location", "44653 Leannon Walks"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Mon, 12 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mike Rohan Sr."], ["description", "Autem qui et culpa at. Possimus delectus commodi consequatur qui. Odio molestias cum eum id aut non."], ["location", "414 Taurean Plaza"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Tue, 27 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Adell Kulas"], ["description", "Voluptatibus assumenda ut magnam praesentium beatae sed amet. Inventore vel illo sequi aliquam eius voluptas corporis. Quia odio incidunt."], ["location", "193 Jenifer Branch"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Thu, 26 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dorthy Nicolas"], ["description", "Aperiam quasi dolorem eveniet. Non ipsum earum saepe quibusdam vero et incidunt. Laborum autem dolores ipsa voluptatum. Beatae incidunt saepe repellendus enim vel. Suscipit nemo modi tempore aliquam non quod maiores."], ["location", "448 Ankunding Wall"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:10:41 UTC], ["updated_at", 2016-11-27 21:10:41 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Henderson Simonis"], ["description", "Rerum ducimus similique debitis. Eum animi non et. Est amet veritatis dolor. Consequatur corporis sit minima. Error et aut molestiae non nesciunt in."], ["location", "143 Ramon Station"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Annie Schultz"], ["description", "Ipsa eligendi quasi inventore accusantium tenetur unde. Rerum ipsam sunt odit deleniti tempora a. Impedit nihil qui quia animi ut nesciunt. Numquam ut dicta sed. Asperiores omnis architecto."], ["location", "26487 Ryder Ridges"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sat, 03 Dec 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kelsi Durgan III"], ["description", "Et ipsam provident. Totam et ut nisi optio maxime. Et excepturi incidunt eius eligendi et occaecati. Aut maiores ut sunt itaque voluptatum facere natus. Vitae quis delectus provident debitis pariatur et rerum."], ["location", "48840 Flatley Common"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 30 Nov 2016], ["duration", 2], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Megane Watsica"], ["description", "Corrupti mollitia illum. Quo velit qui ipsa voluptatem exercitationem itaque aut. Libero neque modi nam ad culpa nulla eum. Ut voluptatem sunt et natus sapiente culpa reprehenderit. Minus distinctio voluptate."], ["location", "6217 Carolina Square"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Sarah Gulgowski"], ["description", "Ad vero voluptates. Mollitia enim ea aliquam porro. Et aut iure. Nihil et voluptatem. Consequuntur quo quia tempore ut harum."], ["location", "912 Shawna Stravenue"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elisha Sporer"], ["description", "Voluptates esse ut adipisci consequatur excepturi atque sit. Corrupti voluptatem quia sit. Amet cumque minima et sit et. Harum veniam sit explicabo quaerat omnis sequi. Occaecati saepe pariatur expedita in soluta odio."], ["location", "65296 Grimes Turnpike"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.6ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.81ms)
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Qui possimus nesciunt explicabo velit labore. Debitis laboriosam quo molestiae. Enim aliquam quam iure excepturi in praesentium. Accusantium ex deleniti dolores quia qui temporibus veniam.", "ends_on"=>"2016-11-29", "location"=>"812 Hauck Inlet", "name"=>"Ms. Ericka Schmidt", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Ericka Schmidt"], ["description", "Qui possimus nesciunt explicabo velit labore. Debitis laboriosam quo molestiae. Enim aliquam quam iure excepturi in praesentium. Accusantium ex deleniti dolores quia qui temporibus veniam."], ["location", "812 Hauck Inlet"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 201 Created in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 9.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Christiana Sporer"], ["description", "Doloremque voluptatum sit sunt. In quas odit in minima sed cum. Deleniti quia ullam est."], ["location", "52875 Schamberger Loaf"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shaylee Kling I"], ["description", "Animi ratione repellat nobis odio. Fugit culpa ratione saepe occaecati omnis ut. Cum sint amet laudantium."], ["location", "21324 Lindgren Crossing"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.3ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Margarita Lemke"], ["description", "Omnis ipsam consequatur quia omnis distinctio. Consequatur quia optio eos accusamus. Quia eius quidem porro minima similique autem doloribus. Hic quam totam eius corporis. Non quos adipisci beatae."], ["location", "6789 Green Via"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:10:56 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 7ms (ActiveRecord: 0.5ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Eula Ebert"], ["description", "Nobis eum accusantium. Est enim dicta porro voluptas. Dolorem illum mollitia ex aut voluptatem."], ["location", "85803 Schmeler Skyway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:10:56 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dayana Hilll DDS"], ["description", "Qui vero qui consequatur laudantium numquam rerum. Eligendi nostrum et. Qui incidunt et eos cum maiores. Temporibus corporis hic enim libero sunt ut in. Libero reprehenderit sunt."], ["location", "3462 Greenfelder Route"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Mon, 12 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Candida Ryan"], ["description", "Rerum sit occaecati rem illum eum quos. Eos qui consectetur dolorem possimus ut. Asperiores id ab consequatur vero autem modi in."], ["location", "7655 Leuschke Port"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Tue, 27 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Columbus Stark"], ["description", "Quia minus quos. Eligendi dignissimos voluptatum eaque. Autem eligendi odio ex animi et."], ["location", "868 Jaquelin Green"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Thu, 26 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cristobal Grady"], ["description", "Itaque nihil accusantium porro fugiat quis. Error illum enim autem est. Aut fugit reiciendis. Consequatur omnis magni est maiores repudiandae distinctio sed."], ["location", "2916 Jasmin Drives"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:10:56 UTC], ["updated_at", 2016-11-27 21:10:56 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miles Beier DVM"], ["description", "Saepe qui quisquam eum ratione doloribus. Dolore dicta cumque. Magni sit maiores totam id odio. Est impedit modi aut facilis molestias."], ["location", "318 Nitzsche Prairie"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kiley Durgan"], ["description", "Occaecati fugiat nulla non. Rerum provident magni error magnam cupiditate et incidunt. Qui quia saepe. Ut qui autem ut voluptatem sed. Iste blanditiis quam maiores."], ["location", "6891 Hadley Valley"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Damon Deckow"], ["description", "Aut beatae in magnam nam et accusamus a. Et a sit iste molestias in. Id harum laudantium nostrum quisquam qui qui. Ratione quis et sed nemo labore cupiditate. Cum rem autem praesentium quia et est qui."], ["location", "404 Lowe Plain"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Elouise Hilpert"], ["description", "Voluptatem iusto dolorem vitae earum architecto velit laboriosam. Molestias velit vero sint nobis ea quos sunt. Repellat et ad velit qui consequuntur doloremque. Nihil aut rerum. Saepe quos animi voluptatem qui veritatis sint vitae."], ["location", "1524 Breitenberg Meadows"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Hugh Cormier"], ["description", "Facere ut eum sed qui. Voluptate consequatur atque voluptatibus voluptas. Et odio ab quisquam dolorem voluptas magni consequatur. Molestiae voluptatem in. Eum rerum eos vel occaecati est."], ["location", "6091 Russel Estate"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.19ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Lemuel Gleason"], ["description", "Ea et molestiae sit aut vel commodi suscipit. Fugiat repellat aut et veritatis velit natus illum. Voluptate aliquam explicabo. Occaecati repudiandae provident temporibus in. Voluptatem ab eligendi."], ["location", "839 Juliana Skyway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 3], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.27ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Sed hic deserunt non ea minus. Sed sapiente deleniti ex et. Aperiam totam id iste non exercitationem numquam. Adipisci sunt voluptatibus facere consequatur. Cum consequatur adipisci qui.", "ends_on"=>"2016-12-05", "location"=>"8132 Williamson Manors", "name"=>"Felicita Mueller", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Felicita Mueller"], ["description", "Sed hic deserunt non ea minus. Sed sapiente deleniti ex et. Aperiam totam id iste non exercitationem numquam. Adipisci sunt voluptatibus facere consequatur. Cum consequatur adipisci qui."], ["location", "8132 Williamson Manors"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 201 Created in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 422 Unprocessable Entity in 14ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Selina Beer"], ["description", "Cupiditate perspiciatis ea rerum doloribus. Explicabo aliquid voluptatem. Impedit adipisci dolorem nisi. Rem est aliquid accusantium beatae."], ["location", "9656 Haylie Dam"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sat, 03 Dec 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mark Haag"], ["description", "Exercitationem voluptatem eum aut aliquam sequi. Est est itaque aut nulla repellat. Labore ut doloribus consequatur repellat. Ut autem cumque veniam aut quibusdam dolor accusantium. Commodi rem similique beatae minima qui aut omnis."], ["location", "523 Baron Terrace"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aurelio Baumbach"], ["description", "Aut voluptates hic at voluptatem. Soluta esse laudantium. Ipsam neque eum natus facilis necessitatibus nulla. Autem illo eum a omnis aut culpa rerum."], ["location", "681 Mosciski Course"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:11:45 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.2ms)
+  [1m[36mGroupEvent Load (0.3ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jada Rohan"], ["description", "Ipsum officia maxime ullam voluptatum non at. Aut suscipit repellat earum et possimus. Qui facere sit in et doloremque. Quos commodi nemo qui."], ["location", "6585 Watsica Pike"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:11:45 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Marcelle Kohler"], ["description", "Sint vero dolor animi voluptatibus. Eligendi rerum enim qui quibusdam quisquam. Qui consequatur voluptas. Consequatur dolores consequatur magni."], ["location", "51783 Pascale Green"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Mon, 12 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alphonso Schultz"], ["description", "Aut unde sapiente debitis impedit. Eum vel est ad. Facere provident omnis corporis quidem sed. Aperiam rerum non architecto ut voluptates ducimus odit."], ["location", "259 Hammes Ville"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Tue, 27 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Keira Daugherty"], ["description", "Illo eius saepe eos omnis quidem et. Alias eos soluta voluptas voluptatem qui. Sequi accusamus et iusto magnam ut inventore. Occaecati in doloremque non quidem unde ut nam."], ["location", "1459 Brown Ford"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Thu, 26 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Celestino Lemke"], ["description", "Odio quidem voluptate. Labore dolorum excepturi dolor quisquam. Aspernatur excepturi sapiente harum autem."], ["location", "612 Zita Ranch"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:11:45 UTC], ["updated_at", 2016-11-27 21:11:45 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Alanis Hodkiewicz"], ["description", "Doloribus exercitationem voluptatibus dolorem ratione inventore expedita. Nostrum minus rerum sit. Et nam perferendis ut voluptate debitis voluptatem voluptatum."], ["location", "245 Kellie Turnpike"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Fletcher Wilkinson PhD"], ["description", "Qui vitae culpa aut assumenda. Dolorum modi odio. Aut molestias consequatur. Quis quia qui quam. Beatae qui provident minima suscipit error quia."], ["location", "2792 Billy Street"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sat, 03 Dec 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Esther McClure"], ["description", "Dicta possimus aspernatur tenetur omnis fuga ut sed. Cumque atque possimus necessitatibus saepe. Ut rem ut aliquid. Enim quam culpa similique."], ["location", "3015 Stephany Well"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sat, 03 Dec 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aurelie Gusikowski Sr."], ["description", "Ab numquam in. Maiores aliquid numquam. Vero ipsa iusto doloribus voluptatem ad eos."], ["location", "4736 Torphy Island"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Birdie Dare"], ["description", "Iusto aut asperiores. Eum nam sit et quos repudiandae perspiciatis. Dolor maiores aperiam quam et dignissimos. Qui mollitia hic velit asperiores. Ipsa in quod qui ipsam illum consequatur."], ["location", "1281 Larkin Walks"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Dallas Swift"], ["description", "Quia hic quasi. Itaque cumque rerum ad qui. Earum cupiditate repellendus fugiat et. Qui et dolorem. Modi est aliquid alias qui in ratione."], ["location", "87530 Kuhn Spurs"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.2ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Et ipsum atque facere. Ut aut distinctio ut. Tempore quas atque qui ullam aut ipsam. Sapiente tenetur necessitatibus hic impedit aperiam nesciunt.", "ends_on"=>"2016-12-02", "location"=>"39099 Gail Club", "name"=>"Dr. Verona Wintheiser", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Verona Wintheiser"], ["description", "Et ipsum atque facere. Ut aut distinctio ut. Tempore quas atque qui ullam aut ipsam. Sapiente tenetur necessitatibus hic impedit aperiam nesciunt."], ["location", "39099 Gail Club"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 6ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 11ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ernest Russel"], ["description", "Quo architecto at eveniet magni. Aliquid quo tempore vel neque saepe. Quia quis numquam. Et quaerat vel non nesciunt quis. Maiores quis dolorem."], ["location", "42820 Morissette Trace"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "name" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["name", "group event name"], ["updated_at", 2016-11-27 21:12:04 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 201 Created in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Vernon Lebsack"], ["description", "Quia qui perferendis et iste nostrum ut. Qui occaecati eligendi quasi aut consequatur sed. Consequuntur praesentium aut veniam aut."], ["location", "908 Gottlieb Freeway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Izabella Wisozk"], ["description", "Non ducimus magnam accusantium est aut molestias ea. Nihil et eos repellat. Ea facilis inventore."], ["location", "4130 Reggie Harbors"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sun, 04 Dec 2016], ["duration", 6], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:12:04 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.5ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mallie Halvorson"], ["description", "Reprehenderit aliquid a facere sunt quis. Autem ut dolores suscipit. Dolor voluptatibus fugiat."], ["location", "2707 Audrey Inlet"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:12:04 UTC], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Miss Mauricio Franecki"], ["description", "Commodi ut officiis consequatur quo. Sed architecto aut. Fugiat enim blanditiis aut qui laudantium. Nihil qui nesciunt quo omnis est dolorum. Tempora quis quae consequatur voluptatem."], ["location", "92589 Auer Squares"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Mon, 12 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dudley Hagenes"], ["description", "Esse rem quisquam ut quia itaque qui. Ut pariatur ut repellat eius veniam et sit. Doloribus et quos id veniam voluptate aut ut. Consequatur architecto aspernatur nesciunt quo debitis laudantium. Ea quisquam aliquam aut sed."], ["location", "989 Jakubowski Parks"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Tue, 27 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Damon Beier"], ["description", "Dolore iure qui adipisci molestias modi. Cupiditate nisi quasi voluptates voluptate qui eos non. Adipisci aut dolor aut non eius ex."], ["location", "30785 Zboncak Expressway"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Thu, 26 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Zechariah Simonis"], ["description", "Consequatur est tenetur. Quod non repudiandae cumque odio fugiat est. Facere nihil aliquid ipsum tempora voluptatem."], ["location", "5169 Mraz Rapid"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:04 UTC], ["updated_at", 2016-11-27 21:12:04 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Abigayle King"], ["description", "Eligendi nostrum at dolores eos. Repellat incidunt eum rerum et et sunt ipsa. Vitae consequatur enim. Unde dolores eveniet iure et temporibus. Aut dolorem aut."], ["location", "517 Gillian Glens"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Gwendolyn Bartell"], ["description", "Et molestiae qui ut voluptatem distinctio velit sed. Omnis tenetur ut esse. Sed molestias a. Sunt ut qui et recusandae. Ut esse praesentium."], ["location", "90378 Eula Center"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Sat, 03 Dec 2016], ["duration", 5], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Dr. Iva Goodwin"], ["description", "Temporibus nam maxime eaque. Voluptatem perferendis consequatur sunt. Repudiandae amet voluptas sit excepturi iusto."], ["location", "5095 Chloe Motorway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 06 Dec 2016], ["duration", 8], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Leora Dietrich"], ["description", "Tempore aut nemo doloribus necessitatibus accusamus. Illo quo ut soluta magnam. Tempora voluptatem aut occaecati qui ipsum aliquid harum. Sit ratione hic."], ["location", "87092 Garnet Forest"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Brant Conn"], ["description", "Culpa earum necessitatibus quisquam totam. Ea quasi et. Hic aliquid impedit vero assumenda accusantium. Laudantium ex numquam mollitia."], ["location", "39929 Russel Greens"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 30 Nov 2016], ["duration", 2], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#index as JSON
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT "group_events".* FROM "group_events"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.17ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Joy Wyman"], ["description", "Praesentium fugiat nisi maiores doloribus laudantium iusto. Non voluptas vel nobis. Laboriosam voluptas molestiae quia id rerum nobis voluptatibus."], ["location", "30059 Delfina Loaf"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Mon, 05 Dec 2016], ["duration", 7], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"description"=>"Fugiat deserunt quo praesentium incidunt eligendi cupiditate. Minima aut in. Ducimus error iste. Eos nobis nam qui deleniti ut mollitia quas. Mollitia corporis et.", "ends_on"=>"2016-12-08", "location"=>"36149 Hailie Divide", "name"=>"Mrs. Monserrat Stokes", "starts_on"=>"2016-11-28", "user_id"=>"1"}}
+Unpermitted parameter: user_id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mrs. Monserrat Stokes"], ["description", "Fugiat deserunt quo praesentium incidunt eligendi cupiditate. Minima aut in. Ducimus error iste. Eos nobis nam qui deleniti ut mollitia quas. Mollitia corporis et."], ["location", "36149 Hailie Divide"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered GroupEventSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 201 Created in 4ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+Processing by Api::V1::GroupEventsController#create as JSON
+  Parameters: {"group_event"=>{"duration"=>"0"}}
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 16ms (Views: 14.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "group_events"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mr. Estefania Terry"], ["description", "Facilis eum nam et exercitationem. Quis ea nulla eum eaque molestias consequuntur illum. Facilis voluptatem et aliquam."], ["location", "8204 Isabel Place"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Fri, 02 Dec 2016], ["duration", 4], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "name" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["name", "group event name"], ["updated_at", 2016-11-27 21:12:23 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Jed Eichmann"], ["description", "Eligendi nesciunt officia necessitatibus omnis dolore ullam soluta. Unde eveniet cupiditate omnis odit. Sed aliquam deserunt eum voluptates suscipit dolores. Nulla nobis deleniti est atque beatae."], ["location", "147 Devan Plain"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Wed, 07 Dec 2016], ["duration", 9], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#update as JSON
+  Parameters: {"group_event"=>{"duration"=>"1.2", "name"=>"group event name"}, "id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Shaun Dickens"], ["description", "Sit ipsum magni qui repudiandae quis. Totam laborum explicabo voluptas facilis eligendi. Enim omnis quia nihil sequi."], ["location", "2417 Ziemann Pike"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 01 Dec 2016], ["duration", 3], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::GroupEventsController#destroy as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mGroupEvent Load (0.1ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:12:23 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 3ms (ActiveRecord: 0.3ms)
+  [1m[36mGroupEvent Load (0.0ms)[0m  [1m[34mSELECT  "group_events".* FROM "group_events" WHERE "group_events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Keagan Predovic"], ["description", "Praesentium voluptatum provident. Ut quia quaerat. Consectetur accusamus ipsam vero magnam quaerat earum laboriosam. Sed sint quod porro dolor molestiae. Cumque pariatur aut voluptatem libero ex."], ["location", "6514 Quitzon Trafficway"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Tue, 29 Nov 2016], ["duration", 1], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "group_events" SET "deleted" = ?, "updated_at" = ? WHERE "group_events"."id" = ?[0m  [["deleted", true], ["updated_at", 2016-11-27 21:12:23 UTC], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Golda Boyer"], ["description", "Quia non sunt vitae et mollitia vel eum. Dolorem consequuntur inventore labore possimus. Corporis id nisi quam quae. Eum consequatur enim est rerum doloremque accusamus sapiente. Saepe numquam hic assumenda rerum nulla."], ["location", "176 Schultz Viaduct"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Mon, 12 Dec 2016], ["duration", 15], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Ms. Lewis Dickens"], ["description", "Architecto ut tenetur enim rerum minima. Velit ut et quod. Enim tempore similique qui commodi et et corrupti."], ["location", "6971 Wintheiser Shoals"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Tue, 27 Dec 2016], ["duration", 30], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Salma Graham"], ["description", "Velit quam est doloribus cum voluptate maiores sapiente. Id aut adipisci possimus velit. Quisquam blanditiis perspiciatis molestias. Aut rerum aspernatur."], ["location", "44285 Stewart Drives"], ["starts_on", Sun, 27 Nov 2016], ["ends_on", Thu, 26 Jan 2017], ["duration", 60], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "group_events" ("name", "description", "location", "starts_on", "ends_on", "duration", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Spencer Legros Jr."], ["description", "Incidunt voluptatem sit. Voluptatem eligendi delectus. Ullam et quia eum natus doloribus qui."], ["location", "9364 Jaylin Village"], ["starts_on", Mon, 28 Nov 2016], ["ends_on", Thu, 08 Dec 2016], ["duration", 10], ["user_id", 1], ["created_at", 2016-11-27 21:12:23 UTC], ["updated_at", 2016-11-27 21:12:23 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
